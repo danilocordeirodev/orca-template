@@ -1,0 +1,10 @@
+sonarqube {
+    properties {
+        property "sonar.projectName", "orca-template-service"
+        property "sonar.projectKey", "orca-template-service"
+        property "sonar.organization", "orca"
+        property "sonar.host.url", "https://sonarcloud.io"
+        property "sonar.kotlin.detekt.reportPaths", "build/reports/detekt/detekt.xml"
+        property "sonar.coverage.exclusions", "**/Application*, src/main/kotlin/com/example/config/**/*,**/*Dto*"
+    }
+}

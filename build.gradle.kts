@@ -1,3 +1,4 @@
+
 plugins {
     id("org.jetbrains.kotlin.jvm") version "1.9.25"
     id("org.jetbrains.kotlin.plugin.allopen") version "1.9.25"
@@ -5,6 +6,10 @@ plugins {
     id("com.github.johnrengelman.shadow") version "8.1.1"
     id("io.micronaut.application") version "4.4.2"
     id("io.micronaut.aot") version "4.4.2"
+//    id("org.flywaydb.flyway")
+//    id("org.sonarqube")
+//    id("io.gitlab.arturbosch.detekt")
+//    id("org.jlleitschuh.gradle.ktlint")
 }
 
 version = "0.1"
@@ -14,6 +19,14 @@ val kotlinVersion=project.properties.get("kotlinVersion")
 repositories {
     mavenCentral()
 }
+
+//apply {
+//    from("${rootProject.rootDir}/config/detekt.gradle")
+//    from("${rootProject.rootDir}/config/tests.gradle")
+//    from("${rootProject.rootDir}/config/jacoco.gradle")
+//    from("${rootProject.rootDir}/config/allopen.gradle")
+//    from("${rootProject.rootDir}/config/sonar.gradle")
+//}
 
 dependencies {
     ksp("io.micronaut:micronaut-http-validation")
